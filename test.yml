@@ -8,4 +8,4 @@
     shell: touch /tmp/AAABBCCC
     
   - name: Ensure bla
-    command: "echo {{ test }} >> /tmp/AAABBCCC"
+    command: "echo '{{ test }}' >> /tmp/AAABBCCC"
