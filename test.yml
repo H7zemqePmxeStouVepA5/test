@@ -1,6 +1,6 @@
 ---
 - name: Update web servers
-  host: localhost
+  hosts: localhost
   gather_facts: true
 
   tasks:
