@@ -6,4 +6,6 @@
   tasks:
   - name: Ensure apache is at the latest version
     shell: touch /tmp/AAABBCCC
+    
+  - name: Ensure bla
     command: "echo {{ apitest }} >> /tmp/AAABBCCC"
