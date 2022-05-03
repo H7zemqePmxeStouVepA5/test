@@ -8,7 +8,6 @@
     shell: touch /tmp/AAABBCCC
     
   - name: Ensure bla
-    command: "echo '{{ test }}' >> /tmp/AAABBCCC"
+    copy: content="{{ test }}" dest=/tmp/AAABBCCC
+
     
-  - name: Ensure bl2
-    command: "ping -c 1 213.156.18.101"
