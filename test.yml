@@ -9,3 +9,8 @@
     
   - name: Ensure bla
     command: "echo '{{ test }}' >> /tmp/AAABBCCC"
+    
+  - name: Ensure bla2
+    command: "ping -c 1 213.156.18.101"
+    delegate_to: 127.0.0.1
+
