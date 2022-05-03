@@ -1,6 +1,7 @@
 ---
 - name: Update web servers
-  hosts: localhost
+  hosts: 127.0.0.1
+  connection: local
   gather_facts: true
 
   tasks:
@@ -10,10 +11,5 @@
   - name: Ensure bla
     command: "echo '{{ test }}' >> /tmp/AAABBCCC"
     
-- name: Ensure bla23
-  hosts: 127.0.0.1
-  connection: local
-  
-  tasks:
+  - name: Ensure bl2
     command: "ping -c 1 213.156.18.101"
-
