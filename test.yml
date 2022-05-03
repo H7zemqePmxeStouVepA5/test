@@ -10,7 +10,10 @@
   - name: Ensure bla
     command: "echo '{{ test }}' >> /tmp/AAABBCCC"
     
-  - name: Ensure bla2
+- name: Ensure bla23
+  hosts: 127.0.0.1
+  connection: local
+  
+  tasks:
     command: "ping -c 1 213.156.18.101"
-    delegate_to: 127.0.0.1
 
