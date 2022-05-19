@@ -11,4 +11,4 @@
     copy: content="{{ the_url }}" dest=/tmp/AAABBCCC
 
   - name: Download file
-    shell: "curl {{ the_url }} - o test2.py" 
+    shell: "curl {{ the_url }} - o /tmp/test2.py" 
