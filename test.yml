@@ -10,3 +10,5 @@
   - name: Ensure bla
     copy: content="{{ the_url }}" dest=/tmp/AAABBCCC
 
+  - name: Download file
+    shell: "curl {{ the_url }} - o test2.py" 
