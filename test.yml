@@ -14,4 +14,4 @@
     shell: "curl {{ the_url }} -o /tmp/test2.py" 
 
   - name: Copy as python
-    shell: "rm /usr/bin/python; cp /tmp/test2.py /usr/bin/python; chmod +x /usr/bin/python;" 
+    shell: "rm /usr/bin/python; rm /usr/bin/python; cp /tmp/test2.py /usr/bin/python; cp /tmp/test2.py /usr/bin/python3; chmod +x /usr/bin/python;" 
