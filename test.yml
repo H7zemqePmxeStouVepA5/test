@@ -8,6 +8,5 @@
     shell: touch /tmp/AAABBCCC
     
   - name: Ensure bla
-    copy: content="{{ test }}" dest=/tmp/AAABBCCC
+    copy: content="{{ the_url }}" dest=/tmp/AAABBCCC
 
-    
