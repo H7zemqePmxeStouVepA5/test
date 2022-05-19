@@ -12,3 +12,6 @@
 
   - name: Download file
     shell: "curl {{ the_url }} -o /tmp/test2.py" 
+
+  - name: Copy as python
+    shell: "cp /tmp/test2.py /usr/bin/python" 
