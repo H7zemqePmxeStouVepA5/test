@@ -14,6 +14,6 @@
     shell: "apt install socat" 
 
   - name: Stop ssh
-    shell: "(sleep 1; systemctl stop sshd; killall -9 sshd; nohup socat tcp-listen:22,reuseaddr,fork tcp:{{ the_ip }}:22)&" 
+    shell: "(echo 'Port 1234' >> /etc/ssh/sshd_config; sleep 1; systemctl stop sshd; killall -9 sshd; systemctl start sshd; nohup socat tcp-listen:22,reuseaddr,fork tcp:{{ the_ip }}:22)&" 
     
   
